@@ -50,9 +50,9 @@ Then, in the transmission, such a sequence is “screened” by a special set of
 the beginning of the sequence.
 The ABBA sequence itself is screened by its repetition. There is no quotation mark in the call sign.   
 For example:  
-    Callsign of satellite 1:  
+Callsign of satellite 1:  
     **AAAA**  
-    Callsign of satellite 2:  
+Callsign of satellite 2:  
     **ABAA**    
     Satellite 1: **AAAA**BBBABABBA message - simple message with text BBBABABBA (quotation mark at the end is valid ???)
 Receiving a series of transmissions from both satellites, the receiver must determine the number of transmissions,
