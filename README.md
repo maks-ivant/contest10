@@ -53,16 +53,16 @@ For example:
 Callsign of satellite 1:  
     **AAAA**  
 Callsign of satellite 2:  
-    **ABAA**    
-    Satellite 1: **AAAA**BBBABABBA message - simple message with text BBBABABBA (quotation mark at the end is valid ???)
+    **ABAA**  
+Satellite 1: **AAAA**BBBABABBA message - simple message with text BBBABABBA (quotation mark at the end is valid ???)
 Receiving a series of transmissions from both satellites, the receiver must determine the number of transmissions,
 the source of each transmission and filter out "quotes" and call signs.
 For example:  
 AAAABABBAABAABBABAABAAAAAABBAABAABA  
-    Satellite 1 owns the message  
-    BABAABB  
-    Satellite 2 owns the message  
-    BAAAAAABAABA  
+Satellite 1 owns the message  
+BABAABB  
+Satellite 2 owns the message  
+BAAAAAABAABA  
 It is required to write a program for the receiver, which according to the entered sequence determines:
 the total number of messages, separately prints all messages received from satellite 1 and from satellite 2,
 freed from quotes and call signs in the message header.
