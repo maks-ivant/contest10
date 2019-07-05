@@ -19,10 +19,10 @@
 Требуется написать программу для приемника, которая по введенной последовательности определяет: общее количество сообщений,
 отдельно печатает все сообщения, принятые со спутника 1 и со спутника 2, освобожденные от кавычек и позывных в заголовке сообщения.
 
-Ввод: производится из файла SPACE.DAT. Файл содержит три строки.  
+**Ввод**: производится из файла SPACE.DAT. Файл содержит три строки.  
 В первой строке - позывные первого спутника, во второй - позывные второго спутника,  
 в третьей - строка символов {A,B} длиной не более 255 символов.  
-Вывод производить в файл MESS.DAT.  
+**Вывод** производить в файл MESS.DAT.  
 В первой строке файла должно быть целое число - количество принятых передач, во второй строке надпись - SPUTNIK1, затем идут сообщения, принятые от спутника 1 (каждое в отдельной строке), затем надпись SPUTNIK2 и сообщения, принятые от спутника 2 (каждое в отдельной строке)   
 ABA  
 BBB  
@@ -37,7 +37,7 @@ AAAABA
 BA  
 ***************************************************************************************************************************************
 
-Task 3 Satellites
+#Task 3 Satellites   
 Two satellites launched into space transmit some messages to the earth.
 Two signals are used for transmission: A and B. Any message consists of a sequence of these signals.
 Each satellite has its own call sign - a unique sequence of signals.
@@ -48,10 +48,10 @@ Call sign is followed by the satellite's message.
 A satellite message may encounter a sequence of signals that coincides with its call sign or that of another satellite.
 Then, in the transmission, such a sequence is “screened” by a special set of signals: ABBA - a "quotation mark" at 
 the beginning of the sequence.
-The ABBA sequence itself is screened by its repetition. There is no quotation mark in the call sign.
-For example:
-    Callsign of satellite 1: AAAA
-    Callsign of satellite 2: ABAA
+The ABBA sequence itself is screened by its repetition. There is no quotation mark in the call sign.   
+For example:  
+    Callsign of satellite 1:   **AAAA**  
+    Callsign of satellite 2:   **ABAA**    
     Satellite 1: AAAABBBABABBA message - simple message with text BBBABABBA (quotation mark at the end is valid ???)
 Receiving a series of transmissions from both satellites, the receiver must determine the number of transmissions,
 the source of each transmission and filter out "quotes" and call signs.
