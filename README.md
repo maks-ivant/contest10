@@ -4,9 +4,9 @@
 У каждого спутника есть свой позывной - уникальная последовательность сигналов. 
 В позывных обоих спутников одинаковое количество сигналов. Никакой спутник не начинает свою передачу, пока ее не закончит другой. 
 Передача сообщения с каждого спутника начинается передачей его позывного. Далее следует последовательность сигналов, которая, собственно и составляет сообщение. В сообщении спутника может встретиться последовательность сигналов, совпадающая с его позывным или позывным другого спутника. Тогда в передаче такая последовательность "экранируется" специальным набором сигналов: ABBA - кавычкой в начале последовательности. Сама последовательность ABBA экранируется своим повторением. В позывных набор символов кавычка не встречается. Например:  
-   Позывные спутника 1:    
-   **AAAA**                
-   Позывные спутника 2:  
+Позывные спутника 1:    
+   **AAAA**    
+Позывные спутника 2:  
    **ABAA**                
    Сообщение спутника 1:       **AAAA**BBBABABBA - простое сообщение с текстом BBBABABBA (кавычка на конце допустима???)   
 Получая серию передач с обоих спутников, приемник должен определить количество передач, источник каждой передачи и освободить ее от кавычек и позывных.  
@@ -50,40 +50,44 @@ Then, in the transmission, such a sequence is “screened” by a special set of
 the beginning of the sequence.
 The ABBA sequence itself is screened by its repetition. There is no quotation mark in the call sign.   
 For example:  
-    Callsign of satellite 1:   **AAAA**  
-    Callsign of satellite 2:   **ABAA**    
-    Satellite 1: AAAABBBABABBA message - simple message with text BBBABABBA (quotation mark at the end is valid ???)
+    Callsign of satellite 1:  
+    **AAAA**  
+    Callsign of satellite 2:  
+    **ABAA**    
+    Satellite 1: **AAAA**BBBABABBA message - simple message with text BBBABABBA (quotation mark at the end is valid ???)
 Receiving a series of transmissions from both satellites, the receiver must determine the number of transmissions,
 the source of each transmission and filter out "quotes" and call signs.
-For example:
-    AAAABABBAABAABBABAABAAAAAABBAABAABA
-    Satellite 1 owns the message BABAABB
-    Satellite 2 owns the message BAAAAAABAABA
+For example:  
+AAAABABBAABAABBABAABAAAAAABBAABAABA  
+    Satellite 1 owns the message  
+    BABAABB  
+    Satellite 2 owns the message  
+    BAAAAAABAABA  
 It is required to write a program for the receiver, which according to the entered sequence determines:
 the total number of messages, separately prints all messages received from satellite 1 and from satellite 2,
 freed from quotes and call signs in the message header.
 
-Input: made from the SPACE.DAT file. The file contains three lines.
+**Input**: made from the SPACE.DAT file. The file contains three lines.
 In the first line - call signs of the first satellite, in the second - call signs of the second satellite,
 in the third, the string of characters {A, B} which is no longer than 255 characters.
-Output is produced into file MESS.DAT.
+**Output** is produced into file MESS.DAT.
 The first line of the file should contain an integer - the number of received broadcasts,
 the second line contains the label - SPUTNIK1, then the messages go,
 received from satellite 1 (each on a separate line), 
 then the label SPUTNIK2 and messages,
 received from satellite 2 (each on a separate line)
 
-ABA
-BBB
-ABAAAAAAAABBBAAAABBAABABBBBA
+ABA  
+BBB  
+ABAAAAAAAABBBAAAABBAABABBBBA  
 
-OUTPUT - MESS.DAT:
-3
-SPUTNIK1
-AAAAAAA
-SPUTNIK2
-AAAABA
-BA
+OUTPUT - MESS.DAT:  
+3  
+SPUTNIK1  
+AAAAAAA  
+SPUTNIK2  
+AAAABA  
+BA  
  
 
 
